@@ -1,3 +1,4 @@
 node_modules/
-data/
-assets/
+dist/
+.DS_Store
+*.local
