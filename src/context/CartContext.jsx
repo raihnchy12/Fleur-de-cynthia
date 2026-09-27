@@ -17,7 +17,12 @@ export function CartProvider({ children }) {
         );
       }
       const product = products.find((p) => p.id === productId);
-      return product ? [...prev, { ...product, quantity: 1 }] : prev;
+      if (!product) return prev;
+
+      // Ambil gambar pertama jika property image berupa Array
+      const defaultImage = Array.isArray(product.image) ? product.image[0] : product.image;
+
+      return [...prev, { ...product, image: defaultImage, quantity: 1 }];
     });
     setIsOpen(true);
   }, []);

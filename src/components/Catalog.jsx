@@ -90,8 +90,8 @@ export default function Catalog() {
                 key={c.id}
                 onClick={() => handleCategoryChange(c.id)}
                 className={`px-space-md py-1.5 rounded-full font-label-md text-label-md transition-all ${isActive
-                    ? "bg-primary-container text-on-primary-container shadow-sm"
-                    : "bg-surface-container text-on-surface-variant hover:bg-surface-container-high"
+                  ? "bg-primary-container text-on-primary-container shadow-sm"
+                  : "bg-surface-container text-on-surface-variant hover:bg-surface-container-high"
                   }`}
               >
                 {c.label}
@@ -128,8 +128,8 @@ export default function Catalog() {
                 key={pageNum}
                 onClick={() => handlePageChange(pageNum)}
                 className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full font-label-lg font-semibold text-sm transition-all ${currentPage === pageNum
-                    ? "bg-primary-container text-on-primary-container shadow-sm scale-105"
-                    : "bg-surface-container text-on-surface-variant hover:bg-surface-container-high"
+                  ? "bg-primary-container text-on-primary-container shadow-sm scale-105"
+                  : "bg-surface-container text-on-surface-variant hover:bg-surface-container-high"
                   }`}
               >
                 {pageNum}

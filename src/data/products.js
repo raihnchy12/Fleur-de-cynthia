@@ -2,7 +2,7 @@ export const categories = [
   { id: "all", label: "Semua Rangkaian" },
   { id: "romantis", label: "Hand Bouquet Romantis" },
   { id: "wisuda", label: "Graduation & Wisuda" },
-  { id: "gift", label: "Hijab Flower Gift Bouquet" },
+  { id: "gift", label: "Flower Gift Bouquet" },
   { id: "snack", label: "Snack Bouquets" },
 ];
 

@@ -3,8 +3,8 @@ import { useRef, useEffect, useState, useCallback } from "react";
 const REVIEWS = [
   {
     text: "Gak nyangka dapet buket secantik ini! Saya pesan 'Graduation Teddy Bear Bouquet' buat pacar yang wisuda, hasilnya rapi banget dan boneka teddy bear-nya gemes sekali. Wrapping-nya kokoh dan gak gampang lecek saat dibawa-bawa. Bikin foto lulusan jadi makin aesthetic!",
-    name: "Anindya Putri",
-    meta: "Surakarta, Engagement Bouquet",
+    name: "Nafiatur",
+    meta: "@nafi.aturs_23",
   },
   {
     text: "Hasil kraf kawat bulunya bener-bener rapi dan detail! Warnanya cantik banget persis sama yang di foto katalog. Yang paling suka tuh buketnya abadi dan tahan lama, gak perlu takut layu. Worth it banget buat kado spesial!",
@@ -13,23 +13,23 @@ const REVIEWS = [
   },
   {
     text: "Awalnya ragu mau order buket kustom, tapi adminnya ramah banget diajak konsultasi. Pengerjaannya presisi, lipatan kertas wrapping-nya simetris dan kombinasi pitanya mewah. Pengemasan aman sampai tujuan tanpa ada yang rusak.",
-    name: "Defi Cahya",
+    name: "Defi",
     meta: "@cahya_aya96",
   },
   {
     text: "Order 'Pastel Blue Bouquet – Elegant Cream' buat anniversary. Buatan tangannya halus banget, paduan warna biru pastel dan cream-nya sangat elegan. Pas diberikan ke pasangan, dia seneng banget! Toko buket langganan terbaik sih ini.",
-    name: "Rian Prasetyo",
-    meta: "Surakarta, Anniversary Gift",
+    name: "Salma",
+    meta: "@hwdas26",
   },
   {
     text: "Jujur puas banget sama kualitas pengerjaannya. Buket kawat bulu dan jajanan snack-nya disusun kokoh, gak gampang goyang atau lepas. Pita dan wrapping vellum-nya bikin kelihatan premium walau harganya ramah di kantong.",
-    name: "Sarah Amelia",
-    meta: "Karanganyar, Birthday Bouquet",
+    name: "Adel",
+    meta: "@dellats_",
   },
   {
     text: "Respon admin sangat cepat dan pengerjaan pre-order tepat waktu sesuai estimasi. Buket sampai dalam kondisi sangat rapi dan mulus. Pasti bakal balik re-order lagi untuk acara wisuda dan ulang tahun berikutnya!",
-    name: "Fitri Handayani",
-    meta: "Karanganyar, Birthday Bouquet",
+    name: "April",
+    meta: "@apriliadevita_",
   }
 ];
 
