@@ -17,7 +17,7 @@ const REVIEWS = [
     meta: "@cahya_aya96",
   },
   {
-    text: "Order 'Pastel Blue Bouquet – Elegant Cream' buat anniversary. Buatan tangannya halus banget, paduan warna biru pastel dan cream-nya sangat elegan. Pas diberikan ke pasangan, dia seneng banget! Toko buket langganan terbaik sih ini.",
+    text: "Beli 'Velvet Crimson Paper Bloom' buat kado anniversary dan hasilnya memuaskan banget. Ukuran buketnya lumayan gede, bunganya padat, dan warnanya terkesan mahal. Nilai plusnya bunga kraf begini abadi gak bakal layu.",
     name: "Salma",
     meta: "@hwdas26",
   },
