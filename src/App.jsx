@@ -19,8 +19,8 @@ export default function App() {
           <StemComposition />
           <Catalog />
           <Philosophy />
-          <StudioInfo />
           <Reviews />
+          <StudioInfo />
         </main>
         <Footer />
         <CartDrawer />

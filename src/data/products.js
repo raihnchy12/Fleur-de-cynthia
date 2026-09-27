@@ -7,27 +7,35 @@ export const categories = [
 ];
 
 // ====== Import Gambar Katalog =======
-import photoBuketPutih from "../assets/photo-buket-bunga-putih.png";
+import photoBuketPutih from "../assets/photo-buket-menjalar.png";
 import photoBuketBoneka from "../assets/photo-buket-boneka-wisuda.png";
 import photoBuketHijab from "../assets/photo-buket-hijab.jpeg";
 import photoBuketSnack from "../assets/photo-buket-snack.jpeg";
 import photoBuketPinkJajanan from "../assets/photo-buket-pink-jajanan.png";
 import photoBuketMerah1 from "../assets/photo-buket-merah.png";
 import photoBuketMerah2 from "../assets/photo-buket-merah2.png";
+import photoBuketSnackCoklat from "../assets/photo-buket-jajanan.jpeg";
+import photoBuketMini from "../assets/photo-buket-mini.jpeg";
+
+// ====== Import Gambar Produk Page 2 ======
+import photoBuketWarnaWarni from "../assets/photo-buket-warnawarni.jpeg";
+import photoBuketBiru from "../assets/photo-buket-biru.jpeg"
+
+
 
 
 //======= Card Produk =======
 export const products = [
   {
     id: 1,
-    name: "💐Pastel Blue Bouquet – Elegant Cream",
-    category: "romantis",
+    name: "💐Creamy Bloom Bouquet",
+    category: ["romantis", "gift"],
     categoryLabel: "Hand Bouquet Romantis",
-    price: 385000,
-    badge: "BEST SELLER",
-    badgeVariant: "gold",
+    price: 150000,
+    badge: "FLOWER FAVORITE",
+    badgeVariant: "tertiary",
     description:
-      "Buket cantik dengan perpaduan biru pastel, putih, dan cream yang lembut. Dilengkapi wrapping elegan dan pita putih, cocok menjadi hadiah manis untuk menyampaikan kasih sayang dan ucapan spesial.",
+      "Buket bunga handmade bernuansa cream, putih, peach, dan cokelat dengan rangkaian bunga yang lembut dan unik. Dibungkus dengan wrapping cream elegan, cocok sebagai hadiah untuk berbagai momen spesial.",
     prepTime: "Pre-Order",
     prepTime2: "Harga belum termasuk ongkir",
     image: photoBuketPutih, // 2. Pakai variabel import di sini
@@ -66,7 +74,7 @@ export const products = [
     id: 4,
     name: "✨Pink Blossom Snack Bouquet",
     category: "snack",
-    categoryLabel: "Bespoke",
+    categoryLabel: "Snack Bouquet",
     price: 70000,
     badge: "SWEET BLOOM",
     badgeVariant: "tertiary",
@@ -94,9 +102,9 @@ export const products = [
   {
     id: 6,
     name: "🌺Velvet Crimson Paper Bloom",
-    category: "romantis",
+    category: ["romantis", "gift"],
     categoryLabel: "Artisanal Paper Series",
-    price: 680000,
+    price: 125000,
     badge: "ARTISANAL CRAFT",
     badgeVariant: "primary",
     description:
@@ -105,6 +113,64 @@ export const products = [
     prepTime2: "Harga belum termasuk ongkir",
     image:
       [photoBuketMerah1, photoBuketMerah2],
+  },
+  {
+    id: 7,
+    name: "🍫Snack Bouquet – Choco Treats",
+    category: "snack",
+    categoryLabel: "Snack Bouquet",
+    price: 35000,
+    badge: "BEST SELLER",
+    badgeVariant: "gold",
+    description:
+      "Buket snack dengan aneka camilan cokelat dan keripik yang dikemas dalam wrapping beige elegan, cocok untuk hadiah sederhana namun tetap berkesan.",
+    prepTime: "Pre-Order",
+    prepTime2: "Harga belum termasuk ongkir",
+    image:
+      photoBuketSnackCoklat,
+  },
+  {
+    id: 8,
+    name: "🌸 Soft Blush Lily Pipe Cleaner Bouquet",
+    category: ["romantis", "gift"],
+    categoryLabel: "Artisanal Pipe Cleaner",
+    price: 25000,
+    badge: "CRAFT FAVORITE",
+    badgeVariant: "primary",
+    description:
+      "Buket kawat bulu bunga lily gradasi pink-putih nan anggun dengan wrapping nude cream elegan, pilihan kado abadi yang cantik untuk setiap momen spesial.",
+    prepTime: "Pre-Order",
+    prepTime2: "Harga belum termasuk ongkir",
+    image:
+      photoBuketMini,
+  },
+  {
+    id: 9,
+    name: "🌈 Pastel Garden Lily Pipe Cleaner Bouquet",
+    category: ["romantis", "gift"],
+    categoryLabel: "Artisanal Pipe Cleaner",
+    price: 45000,
+    badge: "NEW ARRIVAL",
+    badgeVariant: "primary",
+    description:
+      "Buket kawat bulu penuh warna ceria menghadirkan bunga lily pink-putih, sentuhan biru-ungu, dan aksen spiral mint. Dibingkai wrapping kertas kraft natural dengan pita satin putih yang manis, kado unik abadi untuk memeriahkan momen istimewa.",
+    prepTime: "Pre-Order",
+    prepTime2: "Harga belum termasuk ongkir",
+    image: photoBuketWarnaWarni,
+  },
+  {
+    id: 10, // ID urutan ke-10
+    name: "💙 Royal Ocean Blue Lily Bouquet",
+    category: ["romantis", "wisuda", "gift"],
+    categoryLabel: "Hand Bouquet Eksklusif",
+    price: 50000,
+    badge: "ELEGANT CHOICE",
+    badgeVariant: "primary",
+    description:
+      "Rangkaian buket megah bernuansa biru ocean dengan bunga lily biru-putih dan taburan baby's breath cantik. Dibingkai wrapping mekar biru bertingkat yang mewah, pilihan kado istimewa untuk momen wisuda, anniversary, atau ungkapan kagum.",
+    prepTime: "Pre-Order",
+    prepTime2: "Harga belum termasuk ongkir",
+    image: photoBuketBiru,
   },
 ];
 

@@ -5,6 +5,8 @@ import { waLink } from "../data/store";
 
 export default function Catalog() {
   const [active, setActive] = useState("all");
+  const [currentPage, setCurrentPage] = useState(1);
+  const ITEMS_PER_PAGE = 8; // Menampilkan 8 produk per halaman
 
   // Logika filter mendukung multi-kategori (Array) maupun kategori tunggal (String)
   const filtered = useMemo(
@@ -18,6 +20,30 @@ export default function Catalog() {
         ),
     [active]
   );
+
+  // Hitung total halaman berdasarkan jumlah produk yang terfilter
+  const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE);
+
+  // Potong array produk untuk menampilkan hanya 8 produk di halaman aktif
+  const paginatedProducts = useMemo(() => {
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    return filtered.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+  }, [filtered, currentPage]);
+
+  // Reset ke Halaman 1 jika kategori diganti
+  const handleCategoryChange = (catId) => {
+    setActive(catId);
+    setCurrentPage(1);
+  };
+
+  // Navigasi halaman + smooth scroll ke bagian atas katalog
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+    const catalogElement = document.getElementById("katalog-eksklusif");
+    if (catalogElement) {
+      catalogElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <section id="katalog-eksklusif" className="w-full py-space-xl">
@@ -62,7 +88,7 @@ export default function Catalog() {
             return (
               <button
                 key={c.id}
-                onClick={() => setActive(c.id)}
+                onClick={() => handleCategoryChange(c.id)}
                 className={`px-space-md py-1.5 rounded-full font-label-md text-label-md transition-all ${isActive
                     ? "bg-primary-container text-on-primary-container shadow-sm"
                     : "bg-surface-container text-on-surface-variant hover:bg-surface-container-high"
@@ -74,12 +100,55 @@ export default function Catalog() {
           })}
         </div>
 
-        {/* Grid */}
+        {/* Grid (Max 8 Produk Per Halaman) */}
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-space-md lg:gap-gutter pt-space-sm">
-          {filtered.map((product) => (
+          {paginatedProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
+
+        {/* Tombol Paginasi (Slide / Navigasi Halaman) */}
+        {totalPages > 1 && (
+          <div className="flex items-center justify-center gap-2 pt-space-md">
+            {/* Tombol Prev */}
+            <button
+              onClick={() => handlePageChange(currentPage - 1)}
+              disabled={currentPage === 1}
+              className="p-2 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high disabled:opacity-30 disabled:cursor-not-allowed transition-all flex items-center justify-center"
+              aria-label="Halaman Sebelumnya"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+
+            {/* Nomor Halaman */}
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNum) => (
+              <button
+                key={pageNum}
+                onClick={() => handlePageChange(pageNum)}
+                className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full font-label-lg font-semibold text-sm transition-all ${currentPage === pageNum
+                    ? "bg-primary-container text-on-primary-container shadow-sm scale-105"
+                    : "bg-surface-container text-on-surface-variant hover:bg-surface-container-high"
+                  }`}
+              >
+                {pageNum}
+              </button>
+            ))}
+
+            {/* Tombol Next */}
+            <button
+              onClick={() => handlePageChange(currentPage + 1)}
+              disabled={currentPage === totalPages}
+              className="p-2 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high disabled:opacity-30 disabled:cursor-not-allowed transition-all flex items-center justify-center"
+              aria-label="Halaman Selanjutnya"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+        )}
 
         {/* Custom inquiry banner */}
         <div className="p-space-lg rounded-DEFAULT bg-surface-container-low shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-md">
