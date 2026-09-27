@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useCart } from "../context/CartContext";
-import { STORE, waLink } from "../data/store";
+import { STORE } from "../data/store";
 import LogoEmblem from "./LogoEmblem";
 
 const NAV_ITEMS = [
@@ -35,15 +35,17 @@ export default function Navbar() {
       className={`fixed top-0 left-0 w-full z-50 bg-surface-bright/90 backdrop-blur-md border-b border-outline-variant/30 transition-all duration-300 ${scrolled ? "shadow-sm" : ""
         }`}
     >
-      <div className="h-20 max-w-[1380px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-gutter">
+      <div className="h-20 max-w-[1380px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-4">
         {/* Brand */}
-        <a href="#home" className="flex items-center gap-space-md group">
-          <LogoEmblem className="h-9 w-auto" />
-          <div className="flex flex-col justify-center">
-            <span className="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none group-hover:text-primary transition-colors">
+        <a href="#home" className="flex items-center gap-2.5 sm:gap-3 group min-w-0">
+          <div className="shrink-0 flex items-center justify-center">
+            <LogoEmblem className="w-9 h-9 sm:w-10 sm:h-10" />
+          </div>
+          <div className="flex flex-col justify-center min-w-0">
+            <span className="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none group-hover:text-primary transition-colors truncate">
               {STORE.name}
             </span>
-            <span className="font-label-sm text-label-sm text-primary uppercase tracking-[0.2em] mt-0.5">
+            <span className="font-label-sm text-[10px] sm:text-label-sm text-primary uppercase tracking-[0.15em] sm:tracking-[0.2em] mt-0.5 truncate">
               {STORE.tagline}
             </span>
           </div>
@@ -58,8 +60,8 @@ export default function Navbar() {
                 key={item.href}
                 href={item.href}
                 className={`px-space-md py-space-xs rounded-full font-label-lg text-label-lg transition-all ${isActive
-                  ? "bg-primary-container text-on-primary-container font-semibold shadow-sm"
-                  : "text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high"
+                    ? "bg-primary-container text-on-primary-container font-semibold shadow-sm"
+                    : "text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high"
                   }`}
               >
                 {item.label}
@@ -69,7 +71,7 @@ export default function Navbar() {
         </nav>
 
         {/* Actions */}
-        <div className="flex items-center gap-space-sm">
+        <div className="flex items-center gap-space-sm shrink-0">
           <button
             aria-label="Keranjang Belanja"
             onClick={openCart}

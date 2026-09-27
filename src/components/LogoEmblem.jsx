@@ -1,16 +1,13 @@
 import React from "react";
-import logoFC from "../assets/LogoFc.png"; // Sesuaikan path lokasi gambarmu
+import logoFC from "../assets/LogoFc.png";
 
-export default function LogoEmblem({ className = "h-20 w-20" }) {
+export default function LogoEmblem({ className = "h-9 w-auto" }) {
   return (
-    <div className={`relative overflow-hidden rounded-full ${className}`}>
+    <div className={`relative flex items-center justify-center shrink-0 overflow-hidden rounded-full ${className}`}>
       <img
         src={logoFC}
         alt="Logo FC Fleur de Cynthia"
-        className="h-full w-full object-cover object-center scale-[1.78]"
-      /* h-20 w-20 memperbesar lingkaran dasar menjadi 80px x 80px.
-         scale-[1.85] memastikan gambar di-zoom lebih pas agar teks bawah 
-         dan background kartu benar-benar terpotong rapi. */
+        className="h-full w-full object-cover object-center scale-100"
       />
     </div>
   );
