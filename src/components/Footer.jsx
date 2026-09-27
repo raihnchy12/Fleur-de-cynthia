@@ -133,7 +133,7 @@ export default function Footer() {
             <span className="text-outline-variant">•</span>
             <a className="hover:text-primary transition-colors" href="#">Ketentuan Pemesanan</a>
             <span className="text-outline-variant">•</span>
-            <a className="hover:text-primary transition-colors" href="#">Jaminan Kesegaran</a>
+            <a className="hover:text-primary transition-colors" href="#">Jaminan Presisi & Rapi</a>
           </div>
         </div>
       </div>
