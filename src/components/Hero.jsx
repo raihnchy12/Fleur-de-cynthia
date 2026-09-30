@@ -1,5 +1,5 @@
 import { STORE, waLink } from "../data/store";
-import heroBouquetImage from "../assets/photo-buket-boneka-wisuda.png";
+import heroBouquetImage from "../assets/photo-buket-boneka-wisuda.jpeg";
 
 export default function Hero() {
   return (

@@ -8,12 +8,12 @@ export const categories = [
 
 // ====== Import Gambar Katalog =======
 import photoBuketPutih from "../assets/photo-buket-menjalar.jpeg";
-import photoBuketBoneka from "../assets/photo-buket-boneka-wisuda.png";
+import photoBuketBoneka from "../assets/photo-buket-boneka-wisuda.jpeg";
 import photoBuketHijab from "../assets/photo-buket-hijab.jpeg";
-import photoBuketSnack from "../assets/photo-buket-snack.jpeg";
-import photoBuketPinkJajanan from "../assets/photo-buket-pink-jajanan.png";
-import photoBuketMerah1 from "../assets/photo-buket-merah.png";
-import photoBuketMerah2 from "../assets/photo-buket-merah2.png";
+import photoBuketSnack from "../assets/photo-buket-snack.png";
+import photoBuketPinkJajanan from "../assets/photo-buket-pink-jajanan.jpeg";
+import photoBuketMerah1 from "../assets/photo-buket-merah.jpeg";
+import photoBuketMerah2 from "../assets/photo-buket-merah2.jpeg";
 import photoBuketSnackCoklat from "../assets/photo-buket-jajanan.jpeg";
 import photoBuketMini from "../assets/photo-buket-mini.jpeg";
 
@@ -57,7 +57,7 @@ export const products = [
   },
   {
     id: 3,
-    name: "🎀Buket Hijab Flower – Pink Bloom",
+    name: "🎀Bouquet Hijab Flower – Pink Bloom",
     category: "gift",
     categoryLabel: "Hijab Flower Gift Bouquet",
     price: 85000,
@@ -72,7 +72,7 @@ export const products = [
   },
   {
     id: 4,
-    name: "✨Pink Blossom Snack Bouquet",
+    name: "✨Pink Blossom Big Snack Bouquet",
     category: "snack",
     categoryLabel: "Snack Bouquet",
     price: 70000,
