@@ -7,7 +7,7 @@ export const categories = [
 ];
 
 // ====== Import Gambar Katalog =======
-import photoBuketPutih from "../assets/photo-buket-menjalar.png";
+import photoBuketPutih from "../assets/photo-buket-menjalar.jpeg";
 import photoBuketBoneka from "../assets/photo-buket-boneka-wisuda.png";
 import photoBuketHijab from "../assets/photo-buket-hijab.jpeg";
 import photoBuketSnack from "../assets/photo-buket-snack.jpeg";
